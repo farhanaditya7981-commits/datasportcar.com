@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sport Car Collection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Sport Car Database</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>No</th>
+            <th>Brand</th>
+            <th>Model</th>
+            <th>Year</th>
+            <th>Horsepower</th>
+            <th>Top Speed (km/h)</th>
+        </tr>
+    </thead>
+    <tbody id="carTable"></tbody>
+</table>
+
+<script>
+const sportcars = [
+    ["Ferrari","488 GTB",2019,661,330],
+    ["Ferrari","F8 Tributo",2021,710,340],
+    ["Lamborghini","Huracan EVO",2021,631,325],
+    ["Lamborghini","Aventador SVJ",2020,759,350],
+    ["Porsche","911 Turbo S",2022,640,330],
+    ["Porsche","918 Spyder",2018,887,345],
+    ["McLaren","720S",2020,710,341],
+    ["McLaren","765LT",2022,755,330],
+    ["Bugatti","Chiron",2021,1479,420],
+    ["Bugatti","Veyron",2017,1001,408],
+    ["Audi","R8 V10",2021,602,331],
+    ["Nissan","GT-R Nismo",2022,600,330],
+    ["Ford","GT",2020,660,347],
+    ["Chevrolet","Corvette C8",2023,495,312],
+    ["Aston Martin","Vantage",2022,503,314],
+    ["Koenigsegg","Jesko",2023,1600,482],
+    ["Pagani","Huayra",2021,791,383],
+    ["Maserati","MC20",2022,621,325],
+    ["Lotus","Evija",2023,1972,350],
+    ["Toyota","GR Supra",2023,382,250]
+];
+
+const table = document.getElementById("carTable");
+
+sportcars.forEach((car, index) => {
+    table.innerHTML += `
+        <tr>
+            <td>${index + 1}</td>
+            <td>${car[0]}</td>
+            <td>${car[1]}</td>
+            <td>${car[2]}</td>
+            <td>${car[3]}</td>
+            <td>${car[4]}</td>
+        </tr>
+    `;
+});
+</script>
+
+</body>
+</html>
