@@ -1,44 +1,39 @@
 # DATA SPORT CAR
-    <!DOCTYPE html>
-    <html>
-    <head>
+<!DOCTYPE html>
+<html>
+<head>
     <title>Sport Car Collection</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
         }
-
-        h1 {
+  h1 {
             text-align: center;
         }
-
-        table {
+   table {
             width: 100%;
             border-collapse: collapse;
         }
-
-        th, td {
+    th, td {
             border: 1px solid #ddd;
             padding: 10px;
             text-align: center;
-        }
-
-        th {
+    }
+ th {
             background-color: #333;
             color: white;
         }
-
-        tr:nth-child(even) {
+ tr:nth-child(even) {
             background-color: #f2f2f2;
-        }
+        }\
     </style>
-    </head>
-    <body>
+</head>
+<body>
 
     <h1>Sport Car Database</h1>
 
-    <table>
+<table>
     <thead>
         <tr>
             <th>No</th>
@@ -50,10 +45,10 @@
         </tr>
     </thead>
     <tbody id="carTable"></tbody>
-    </table>
+</table>
 
-    <script>
-    const sportcars = [
+<script>
+const sportcars = [
     ["Ferrari","488 GTB",2019,661,330],
     ["Ferrari","F8 Tributo",2021,710,340],
     ["Lamborghini","Huracan EVO",2021,631,325],
@@ -74,11 +69,11 @@
     ["Maserati","MC20",2022,621,325],
     ["Lotus","Evija",2023,1972,350],
     ["Toyota","GR Supra",2023,382,250]
-    ];
+];
 
-    const table = document.getElementById("carTable");
+const table = document.getElementById("carTable");
 
-    sportcars.forEach((car, index) => {
+sportcars.forEach((car, index) => {
     table.innerHTML += `
         <tr>
             <td>${index + 1}</td>
@@ -89,8 +84,8 @@
             <td>${car[4]}</td>
         </tr>
     `;
-    });
-    </script>
+});
+</script>
 
-    </body>
-    </html>
+</body>
+</html>
